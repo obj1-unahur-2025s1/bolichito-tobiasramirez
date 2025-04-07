@@ -1,4 +1,6 @@
 import personas.*
+import bolichito.*
+
 
 object pardo {
   method esFuerte() = false
@@ -18,6 +20,10 @@ object verde {
   method esFuerte() = true 
     
   
+}
+
+object naranja {
+  method esFuerte() = true
 }
 
 object cobre {
@@ -44,7 +50,7 @@ object lino {
 }
 
 object placa {
- var unPeso = 800
+ var  unPeso = 800
  var unColor = verde
   method material() = cobre
   method peso() = unPeso
@@ -78,3 +84,27 @@ object remera {
   method material()  {return lino}
 }
 
+object arito {
+  method peso() = 180
+  method color() = celeste
+  method material() = cobre
+}
+
+object banquito {
+  var color = naranja
+  method peso() = 1700
+  method color() = color
+  method color(unColor) {color = unColor}
+}
+
+object cajita {
+  var objetoDentro = pelota
+  method color() = rojo
+  method material() = cobre
+  method peso() {
+    return objetoDentro.peso() + 400
+  } 
+  method objetoDentro(unObjeto) {
+    objetoDentro = unObjeto
+  }
+}

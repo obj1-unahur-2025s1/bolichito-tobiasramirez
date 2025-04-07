@@ -1,4 +1,6 @@
 import objetos.*
+import bolichito.*
+
 
 object rosa {
     
